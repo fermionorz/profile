@@ -1,4 +1,4 @@
-baseURL: "https://fermionorz.github.io/profile/"
+baseURL: "https://fermionorz.github.io/"
 languageCode: "zh-cn"
 title: "奇怪的网站"
 theme: hugo-profile
@@ -76,7 +76,7 @@ params:
   title: "Fermion 的个人中心"
   description: Text about my cool site
   # staticPath: ""  # The path to serve the static files from
-  favicon: "./images/fav.png"
+  favicon: "/images/fav.png"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -127,7 +127,7 @@ params:
   # If you want to customize the menu, you can change it here
   navbar:
     align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
-    brandLogo: "./images/logo.png" # Logo for the brand | default is the favicon variable
+    brandLogo: "/images/logo.png" # Logo for the brand | default is the favicon variable
     # showBrandLogo: false # Show brand logo in nav bar | default is true
     brandName: "Fermion 的个人主页" # Brand name for the brand | default is the title variable
     disableSearch: true
@@ -151,7 +151,7 @@ params:
     title: "Fermion."
     subtitle: "这里是我的个人简介"
     content: "这里本应该填一些内容来充实一下，但是我实在不知道写什么，所以就这样简单说一下吧。"
-    image: ./images/hero.png
+    image: /images/hero.png
     bottomImage:
       enable: true
     # roundImage: true # Make hero image circular | default false
@@ -175,7 +175,7 @@ params:
   about:
     enable: true
     title: "关于我"
-    image: "./images/logo.png"
+    image: "/images/logo.png"
     content: |-
       I am a software developer with a passion for web development. I have a background in computer science and mathematics, and I have a strong interest in the intersection of technology and art. I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA.
 
