@@ -1,0 +1,405 @@
+baseURL: "https://fermionorz.github.io"
+languageCode: "zh-cn"
+title: "奇怪的网站"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  # page:
+  #   - "HTML"
+  #   - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: blog
+      name: 博客
+      title: 博客页面
+      url: /blog
+      weight: 1
+    - identifier: wiki
+      name: 笔记
+      title: 学习笔记
+      url: /wiki
+      weight: 2
+
+    # Tools Menu
+    - identifier: Tools
+      title: 常用工具
+      name: 工具
+      weight: 3
+
+    - identifier: osint
+      parent: Tools
+      name: Search Tools
+      title: OSINT Tools
+      url: /osint/
+      weight: 1
+    - identifier: CyberChef
+      parent: Tools
+      name: CyberChef
+      title: 加解密工具
+      url: /cyber_chef/
+      weight: 2
+
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "Fermion 的个人中心"
+  description: Text about my cool site
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/images/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # When using hex codes for colors, quotations must be used along with the # sign
+  # color:
+  #   textColor: "#343a40"
+  #   secondaryTextColor: "#6c757d"
+  #   textLinkColor: "#007bff"
+  #   backgroundColor: "#eaedf0"
+  #   secondaryBackgroundColor: "#64ffda1a"
+  #   primaryColor: "#007bff"
+  #   secondaryColor: "#f8f9fa"
+
+  #   darkmode:
+  #     textColor: "#e4e6eb"
+  #     secondaryTextColor: "#b0b3b8"
+  #     textLinkColor: "#ffffff"
+  #     backgroundColor: "#18191a"
+  #     secondaryBackgroundColor: "#212529"
+  #     primaryColor: "#ffffff"
+  #     secondaryColor: "#212529"
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    brandLogo: "/images/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "Fermion 的个人主页" # Brand name for the brand | default is the title variable
+    disableSearch: true
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
+    enableSeparator: false
+    menus:
+      disableAbout: true
+      disableExperience: true
+      disableEducation: true
+      disableProjects: true
+      disableAchievements: true
+      disableContact: true
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, 我的 ID 是"
+    title: "Fermion."
+    subtitle: "这里是我的个人简介"
+    content: "这里本应该填一些内容来充实一下，但是我实在不知道写什么，所以就这样简单说一下吧。"
+    image: /images/hero.png
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Resume"
+      url: "#"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/fermionorz
+      #   - icon: fab fa-x-twitter
+      #     url: https://example.com
+      # customIcons:
+      #   - icon: /fav.png
+      #     url: "https://example.com"
+
+  # About
+  about:
+    enable: true
+    title: "关于我"
+    image: "/images/logo.png"
+    content: |-
+      I am a software developer with a passion for web development. I have a background in computer science and mathematics, and I have a strong interest in the intersection of technology and art. I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA.
+
+      I am currently working on a project that will be used to help people find the best way to get around the city.
+    skills:
+      enable: true
+      title: "Here are a few technologies I've been working with recently:"
+      items:
+        - "C"
+        - "Red Team"
+        - "Rust"
+        - "Blue Team"
+        - "Python"
+        - "DevOps"
+
+  # Experience
+  experience:
+    enable: true
+    title: "工作经验"
+    items:
+      # - job: "Senior Software Developer"
+      #   company: "Facebook"
+      #   companyUrl: "https://example.com"
+      #   date: "Jan 2025 - present"
+      #   featuredLink:
+      #     enable: true
+      #     name: "View the project"
+      #     url: "https://example.com"
+      #   content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+
+      - job: "信息安全工程师"
+        company: "电信XX子公司"
+        companyUrl: "https://example.com"
+        date: "2023年02月 - 至今"
+        info:
+          enable: false
+          content: I worked as a software developer for more than one year in Amazon.
+        featuredLink:
+          enable: true
+          url: "https://example.com"
+        content: |
+          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+
+          - Lead backend developer for a product.
+          - Created a frontend design for a product.
+
+      - job: "红队评估（临时）"
+        company: "XX安全团队"
+        companyUrl: "https://example.com"
+        date: "2022年12月 - 2023年02月"
+        info:
+          enable: false
+        featuredLink:
+          enable: true
+          url: "https://example.com"
+        content: |
+          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+
+          - Lead backend developer for a product.
+          - Created a frontend design for a product.
+
+      - job: "安全服务工程师"
+        company: "XX云安全"
+        companyUrl: "https://www.baidu.com/s?wd=%E4%BA%91%E5%AE%89%E5%85%A8"
+        date: "2022年02月 - 2022年11月"
+        info:
+          enable: false
+        featuredLink:
+          enable: true
+          url: "https://example.com"
+        content: |
+          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+
+          - Lead backend developer for a product.
+          - Created a frontend design for a product.
+
+  # Education
+  education:
+    enable: true
+    title: "教育经历"
+    index: false
+    items:
+      - title: "物联网工程 - 学士学位"
+        school:
+          name: "全日制普通本科院校"
+          url: "https://www.edu.cn/"
+        date: "2018 - 2022"
+        GPA: "3.9 out of 5.0"
+        content: |-
+          I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
+          - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
+          - Face mask detection using a single convolutional neural network.
+
+          Extracurricular Activities
+            - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+        featuredLink:
+          enable: true
+          name: "My academic record"
+          url: "https://example.com"
+
+  # projects
+  projects:
+    enable: true
+    title: "项目"
+    items:
+      - title: Hugo Profile
+        content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
+        image: /images/projects/profile.png
+        featured:
+          name: Demo
+          link: https://hugo-profile.netlify.app
+        badges:
+          - "Hugo"
+          - "Bootstrap"
+          - "Javascript"
+        links:
+          - icon: fa fa-envelope
+            url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/hugo-profile
+          - icon: fab fa-twitter
+            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+
+      - title: Image Converter
+        content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
+        image: /images/projects/converter.jpg
+        featured:
+          name: Demo
+          link: https://django-converter.herokuapp.com
+        badges:
+          - "Django"
+          - "Bootstrap"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/converter
+
+      - title: Hugo Profile V2
+        content: A clean and simple Hugo template for personal portfolio and blog.
+        image: /images/projects/profile2.jpg
+        featured:
+          name: Demo V2
+          link: https://hugo-profile-2.netlify.app
+        badges:
+          - "Hugo"
+          - "Bootstrap"
+          - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/HugoProfileV2
+
+  # Achievements
+  achievements:
+    enable: true
+    title: "朋友"
+    items:
+      - title: 水气掠过
+        content: 当代大文豪，抽象艺术家。从容是 TA 的代名词，TA 在任何场所都可以保持强烈的松弛感。
+        url: https://dilutepillow.github.io/
+        image: https://avatars.githubusercontent.com/u/125887503?v=4
+      - title: IHEXON
+        content: 大艺术家，他有着海苔味的唇。
+        url: https://ihexon.github.io/
+        image: https://avatars.githubusercontent.com/u/14349453?v=4
+      - title: Manesec
+        content: 斗宗强者恐怖如斯，这就是超人！。
+        url: "https://manesec.com"
+        image: "https://avatars.githubusercontent.com/u/42072997?v=4"
+
+  #Contact
+  contact:
+    enable: true
+    title: "联系我"
+    content: 我的邮箱每天都会遍历一遍，如果你给我发邮件，那我两天之内会回复你。
+    btnName: Mail me
+    btnLink: mailto:7tsl9ijac@mozmail.com
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+    #   messageRows: 5
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: false
+      disableFeaturedImage: false
+    # socialNetworks:
+    #   github: https://github.com
+    #   linkedin: https://linkedin.com
+    #   twitter: https://twitter.com
+    #   instagram: https://instagram.com
+    #   facebook: https://facebook.com
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    socialShare: false
+    readTime:
+      enable: false
+      content: "min read"
+    scrollprogress:
+      enable: false
+    tags:
+      openInNewTab: false
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
