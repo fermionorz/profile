@@ -1,4 +1,4 @@
-name = "Profile"
+name = "profile"
 license = "MIT"
 licenselink = "https://github.com/gurusabarish/hugo-profile/blob/master/LICENSE"
 description = "A high performance and mobile first hugo template for personal portfolio and blog."
@@ -9,4 +9,4 @@ min_version = "0.68.0"
 
 [author]
   name = "Fermionorz"
-  homepage = "https://fermionorz.github.io/"
+  homepage = "https://fermionorz.github.io/profile/"
