@@ -207,9 +207,9 @@ params:
       #   content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
 
       - job: "信息安全工程师"
-        company: "电信XX子公司"
+        company: "中国电信某子公司"
         companyUrl: "https://example.com"
-        date: "2023年02月 - 至今"
+        date: "2023 年 02 月 - 至今"
         info:
           enable: false
           content: I worked as a software developer for more than one year in Amazon.
@@ -225,7 +225,7 @@ params:
       - job: "红队评估（临时）"
         company: "XX安全团队"
         companyUrl: "https://example.com"
-        date: "2022年12月 - 2023年02月"
+        date: "2022 年 12 月 - 2023 年 01 月"
         info:
           enable: false
         featuredLink:
@@ -240,7 +240,7 @@ params:
       - job: "安全服务工程师"
         company: "XX云安全"
         companyUrl: "https://www.baidu.com/s?wd=%E4%BA%91%E5%AE%89%E5%85%A8"
-        date: "2022年02月 - 2022年11月"
+        date: "2022 年 02 月 - 2022 年 11 月"
         info:
           enable: false
         featuredLink:
